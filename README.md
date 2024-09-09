@@ -42,7 +42,7 @@
 
    ```bash
    cd <Examen_JavaScript_Romero_Kevin>
->
+
    ```
 
 3. Abre `index.html` en tu navegador para ver la pagina en funcionamiento.
