@@ -41,7 +41,7 @@
 2. Navega al directorio del proyecto:
 
    ```bash
-   cd <Examen_JavaScript_Romero_Kevin
+   cd <Examen_JavaScript_Romero_Kevin>
 >
    ```
 
