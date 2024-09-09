@@ -47,6 +47,10 @@
 
 3. Abre `index.html` en tu navegador para ver la pagina en funcionamiento.
 
+## Uso
+
+1. **Abre index.html**: y ya podras contarnos tus chismes.
+
 
 ## Contribuciones
 
