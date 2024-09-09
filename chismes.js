@@ -171,9 +171,35 @@ mostrador2.forEach(element => {
 
 `
 });
+}
 
 
 
+
+const mostrador_per = document.querySelector(".personales")
+mostrador_per.addEventListener("click", mostrar_personal)
+
+function mostrar_personal(){
+    const mostrador = JSON.parse(localStorage.getItem("contado"))
+    const escribir = document.querySelector("#listaChismes")
+
+    let objeto =  mostrador.find(element=> element.categoria === "Personal"
+     )
+    console.log(objeto)
+    escribir.innerHTML =""
+    
+    escribir.innerHTML += `
+            <div class="divide">
+                <p>Categoria: Contados</p>
+                <p>descripcion:${objeto.descripcion}</p>
+                <p>categoria: ${objeto.categoria}</p>
+                <p>fecha: ${objeto.fecha}</p>
+                <p>comentario: ${objeto.comentario}</p>
+                <p>Identificador: ${objeto.id}</p>
+                    
+            </div>
+
+`
 
 }
 
@@ -182,9 +208,65 @@ mostrador2.forEach(element => {
 
 
 
+const mostrador_labor = document.querySelector(".labores")
+mostrador_labor.addEventListener("click", mostrar_labor)
 
+function mostrar_labor(){
+    const mostrador = JSON.parse(localStorage.getItem("contado"))
+    const escribir = document.querySelector("#listaChismes")
 
+    let objeto =  mostrador.find(element=> element.categoria === "Laboral"
+     )
+    console.log(objeto)
+    escribir.innerHTML =""
+    
+    escribir.innerHTML += `
+            <div class="divide">
+                <p>Categoria: Contados</p>
+                <p>descripcion:${objeto.descripcion}</p>
+                <p>categoria: ${objeto.categoria}</p>
+                <p>fecha: ${objeto.fecha}</p>
+                <p>comentario: ${objeto.comentario}</p>
+                <p>Identificador: ${objeto.id}</p>
+                    
+            </div>
 
+`
+
+}
+
+const mostrador_fami = document.querySelector(".familiares")
+mostrador_fami.addEventListener("click", mostrar_familiar)
+
+function mostrar_familiar(){
+    const mostrador = JSON.parse(localStorage.getItem("contado"))
+    const escribir = document.querySelector("#listaChismes")
+
+    let objeto =  mostrador.find(element=> element.categoria === "Familiar"
+     )
+    if (objeto === undefined){
+        let mostrador = JSON.parse(localStorage.getItem("guardado"))
+        let objeto =  mostrador.find(element=> element.categoria === "Familiar" )
+    }else{
+        escribir.innerHTML =""
+    
+        escribir.innerHTML += `
+                <div class="divide">
+                    <p>Categoria: Contados</p>
+                    <p>descripcion:${objeto.descripcion}</p>
+                    <p>categoria: ${objeto.categoria}</p>
+                    <p>fecha: ${objeto.fecha}</p>
+                    <p>comentario: ${objeto.comentario}</p>
+                    <p>Identificador: ${objeto.id}</p>
+                        
+                </div>
+    
+    `
+    
+    }
+    
+
+}
 
 
 
