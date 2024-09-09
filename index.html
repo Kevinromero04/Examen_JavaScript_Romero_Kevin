@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chismesland.com</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Chismeslands.com</h1>
+        <p>Tu lugar para registrar y compartir chismes.</p>
+    </header>
+
+    <main>
+        <section class="chisme-form">
+            <h2>Agregar tus chismes aqui</h2>
+            <form id="chismeForm">
+                <label for="descripcion">Descripción del Chisme:</label>
+                <textarea id="descripcion" required></textarea>
+                <p>Coloca un identificador:</p>
+                <input id="identificador" type="number"> 
+
+
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" required>
+                    <option value="">Selecciona una categoría</option>
+                    <option value="Personal" class="personal">Personal</option>
+                    <option value="Laboral" class="laboral">Laboral</option>
+                    <option value="Familiar" class="familiar">Familiar</option>
+                </select>
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" required>
+
+                <label for="estado">Estado:</label>
+                <select id="estado" required>
+                    <option value="Guardado">Guardado</option>
+                    <option value="Contado">Contado</option>
+                </select>
+
+                <label for="comentarios">Comentarios Adicionales:</label>
+                <textarea id="comentarios"></textarea>
+
+                <button type="submit" class="envia_chisme">Guardar Chisme</button>
+            </form>
+        </section>
+
+        <section class="chismes-list">
+            <h2>Lista de Chismes</h2>
+            <div id="filtros">
+                <label for="filtroCategoria">Filtrar por Categoría:</label>
+                <select id="filtroCategoria">
+                    <option value="">Todas</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Laboral">Laboral</option>
+                    <option value="Familiar">Familiar</option>
+                </select>
+
+
+                <input type="text" id="busqueda" placeholder="Buscar chisme...">
+            </div>
+            <p>Buscar chismes: </p>
+            <button class="todos">Todos</button>
+            <button class="chis_guardado">Guardados</button>
+            <button class="chis_contado">Contados</button>
+            <ul id="listaChismes">
+                <!-- Aquí se mostrarán los chismes guardados -->
+            </ul>
+        </section>
+    </main>
+
+
+    <script src="chismes.js"></script>
+</body>
+</html>

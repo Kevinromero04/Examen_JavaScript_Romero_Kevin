@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffa074;
+    color: #333;
+}
+
+header {
+    background-color: #c97f5d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: solid 6px black;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgb(219, 219, 219);
+
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.chisme-form, .chismes-list {
+    margin-bottom: 40px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #c97f5d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffabab;
+}
+
+#filtros {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#filtros input, #filtros select {
+    flex: 1;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #c97f5d;
+    color: white;
+}
+.divide{
+    border: black solid 2px;
+    display: flex;
+    background-color: rgba(77, 131, 131, 0.226);
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+}
+#listaChismes{
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    gap: 20px;
+}
+.chismes-list button{
+    width: 30%;
+}
